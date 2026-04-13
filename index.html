@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BudaBit — Prémium kriptovaluta kereskedési platform</title>
+<meta name="description" content="BudaBit — a magyar kereskedők prémium platformja. Bitcoin, Ethereum és több mint 100 kriptovaluta egy helyen." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="container header-inner">
+    <a href="javascript:void(0)" class="logo" aria-label="BudaBit">
+      <svg class="logo-mark" viewBox="0 0 48 48" width="40" height="40" aria-hidden="true">
+        <defs>
+          <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#4F46E5"/>
+            <stop offset=".5" stop-color="#7C3AED"/>
+            <stop offset="1" stop-color="#FF7A59"/>
+          </linearGradient>
+        </defs>
+        <circle cx="24" cy="24" r="20" fill="none" stroke="url(#logoGrad)" stroke-width="2.5"/>
+        <text x="24" y="31" text-anchor="middle" font-family="Manrope, sans-serif"
+              font-weight="800" font-size="20" fill="#F5F5F5">B</text>
+      </svg>
+      <span class="logo-text">Buda<span class="logo-accent">Bit</span></span>
+    </a>
+
+    <nav class="nav" id="mainNav" aria-label="Főnavigáció">
+      <a href="#lehetosegek">Lehetőségek</a>
+      <a href="#jellemzok">Jellemzők</a>
+      <a href="#arfolyam">Árfolyamok</a>
+      <a href="#biztonsag">Biztonság</a>
+      <a href="#regisztracio" class="btn btn-ghost">Belépés</a>
+    </nav>
+
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-inner">
+    <div class="hero-left reveal">
+      <span class="eyebrow">Kezdj el ma kriptovalutákkal kereskedni, mint egy profi</span>
+      <h1>
+        <span class="brand-title">BudaBit</span>
+        <span class="hero-sub">A prémium kereskedési élmény</span>
+      </h1>
+      <p class="hero-lead">
+        Csatlakozz a BudaBit közösségéhez, és lépj kapcsolatba a legjobb brókerekkel,
+        akik minden lépésnél melletted állnak. Kereskedj magabiztosan, és használd ki
+        a legújabb piaci trendeket — ma, Budapestről, biztonságosan.
+      </p>
+      <div class="trust-row">
+        <div class="trust"><span class="trust-icon">🔒</span> SSL titkosítás</div>
+        <div class="trust"><span class="trust-icon">🛡️</span> 100% spam-mentes</div>
+        <div class="trust"><span class="trust-icon">⚡</span> Azonnali hozzáférés</div>
+      </div>
+    </div>
+
+    <form class="hero-form reveal" id="regisztracio" novalidate>
+      <h3>Tudja meg, hogyan kezdheti el<br/>a kereskedési utazását</h3>
+      <label>
+        <input type="text" name="firstName" placeholder="Keresztnév" required />
+      </label>
+      <label>
+        <input type="text" name="lastName" placeholder="Vezetéknév" required />
+      </label>
+      <label>
+        <input type="email" name="email" placeholder="E-mail" required />
+      </label>
+      <label class="phone-label">
+        <span class="flag">🇭🇺</span>
+        <input type="tel" name="phone" placeholder="+36 20 123 4567" required />
+      </label>
+      <button type="submit" class="btn btn-primary">Tudj meg többet</button>
+      <p class="form-note">* Az Ön személyes információi megoszthatók harmadik felekkel,
+      akik kereskedési szolgáltatásokat nyújtanak, ahogy azt a weboldal
+      adatvédelmi szabályzata előírja.</p>
+    </form>
+  </div>
+
+  <div class="coins" aria-hidden="true">
+    <span class="coin coin-btc">₿</span>
+    <span class="coin coin-eth">Ξ</span>
+    <span class="coin coin-gold">●</span>
+    <span class="coin coin-small">◆</span>
+  </div>
+</section>
+
+<!-- ===== LIVE ÁRFOLYAM ===== -->
+<section class="ticker-section" id="arfolyam">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Élő árfolyamok</span>
+      <h2>Valós idejű kriptopiac</h2>
+      <p>A legfontosabb kriptovaluták árfolyamai, élőben frissítve a CoinGecko API-ról.</p>
+    </div>
+    <div class="ticker-grid" id="tickerGrid">
+      <div class="ticker-card skeleton"><div></div></div>
+      <div class="ticker-card skeleton"><div></div></div>
+      <div class="ticker-card skeleton"><div></div></div>
+      <div class="ticker-card skeleton"><div></div></div>
+      <div class="ticker-card skeleton"><div></div></div>
+      <div class="ticker-card skeleton"><div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LEHETŐSÉGEK ===== -->
+<section class="opportunities" id="lehetosegek">
+  <div class="container opp-inner">
+    <div class="opp-visual reveal">
+      <div class="scene-3d" id="scene3d"></div>
+    </div>
+    <div class="opp-content reveal">
+      <span class="section-eyebrow">Lehetőségek</span>
+      <h2>Milyen kereskedelmi lehetőségeket kínál a BudaBit?</h2>
+      <p class="lead">
+        A BudaBit számos kereskedési lehetőséget kínál a felhasználók számára,
+        hogy felfedezhessék. Kiváló platformot teremt az első alkalommal kereskedők
+        számára, hogy többet megtudjanak a különböző piacokról és megtalálják
+        a saját területüket.
+      </p>
+
+      <div class="opp-list">
+        <div class="opp-item">
+          <span class="opp-num">1</span>
+          <div>
+            <h4>Általános vagyonkereskedelem</h4>
+            <p>A részvények és értékpapírok kulcsfontosságú szerepet játszanak a modern
+            kereskedelemben. Folyamatosan változó értékük izgalmas piacot teremt,
+            amelyet az okos kereskedők potenciáljára használhatnak.</p>
+          </div>
+        </div>
+        <div class="opp-item">
+          <span class="opp-num">2</span>
+          <div>
+            <h4>Forex (devizapiac)</h4>
+            <p>A devizapiac rendkívül likvid és aktív, a külföldi valuták állandó mozgása
+            nagy lehetőséget biztosít a kereskedők számára a siker eléréséhez.</p>
+          </div>
+        </div>
+        <div class="opp-item">
+          <span class="opp-num">3</span>
+          <div>
+            <h4>Kriptovaluta (Bitcoin)</h4>
+            <p>A kriptokereskedés alapja az alacsony áru vásárlás és magas áru eladás
+            stratégiáján alapul. A BudaBit főként a Bitcoin kereskedésére összpontosít,
+            de azok a felhasználók, akik okosan és megfelelő időben tanulnak kereskedni,
+            potenciálisan jövedelmező szakaszt élvezhetnek a piacon.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== JELLEMZŐK ===== -->
+<section class="features" id="jellemzok">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="section-eyebrow">Jellemzők</span>
+      <h2>Hogyan működik a BudaBit,<br/>és milyen lehetőségeket nyújt?</h2>
+    </div>
+
+    <div class="feature-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon">👤</div>
+        <h3>Felhasználóbarát felület</h3>
+        <p>A platformunk a kereskedelmi létrának minden szintjén az egyszerű használat
+        érdekében lett kialakítva, azért időt és energiát takarítva meg Önnek, hogy
+        a piaci tapasztalat takarékos kereskedelmi tevékenységre összpontosíthasson.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">📊</div>
+        <h3>Hatékony jelek</h3>
+        <p>Ne hagyd ki a kriptopiac számtalan lehetőségét! Kereskedj magabiztosan
+        a BudaBit alkalmazással — az egyik legjobb kereskedési szoftver
+        a kriptopiaci területen. Prémium technológiánk mesterséges intelligenciát
+        és algoritmusokat használ az éles piaci kutatás és elemzés végzésére
+        valós időben.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon">🌐</div>
+        <h3>Elérhetőség kulcsfontosságú</h3>
+        <p>Bármikor, bárhol kereskedhetsz a BudaBittel — a platform az inkluzivitás
+        és hozzáférhetőség érdekében készült. Hozzáférhető, felhasználóbarát
+        webes platformunk elérhető bármilyen böngészőben és stabil internetkapcsolattal
+        rendelkező eszközön.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PHONE MOCKUP ===== -->
+<section class="mockup-section">
+  <div class="container mockup-inner">
+    <div class="mockup-content reveal">
+      <span class="section-eyebrow">Mobil alkalmazás</span>
+      <h2>A BudaBit a zsebedben</h2>
+      <p>Kereskedj bárhonnan, bármikor. A BudaBit mobil felülete ugyanazt a prémium
+      élményt nyújtja, mint a webes verzió — élő árfolyamok, azonnali értesítések,
+      biztonságos tranzakciók.</p>
+      <ul class="check-list">
+        <li>Valós idejű piaci adatok</li>
+        <li>Push értesítések fontos mozgásokról</li>
+        <li>Biometrikus bejelentkezés</li>
+        <li>24/7 ügyfélszolgálat</li>
+      </ul>
+    </div>
+    <div class="mockup-visual reveal">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="app-top">
+            <span class="app-logo">B</span>
+            <span class="app-balance">€ 12 847,50</span>
+          </div>
+          <div class="app-chart">
+            <svg viewBox="0 0 260 100" preserveAspectRatio="none">
+              <defs>
+                <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#FF7A59" stop-opacity=".6"/>
+                  <stop offset="1" stop-color="#FF7A59" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <path d="M0,70 L20,60 L40,65 L60,50 L80,55 L100,35 L120,45 L140,30 L160,40 L180,20 L200,28 L220,15 L240,22 L260,10 L260,100 L0,100 Z"
+                    fill="url(#chartGrad)"/>
+              <path d="M0,70 L20,60 L40,65 L60,50 L80,55 L100,35 L120,45 L140,30 L160,40 L180,20 L200,28 L220,15 L240,22 L260,10"
+                    fill="none" stroke="#FF7A59" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="app-row">
+            <span class="app-coin">₿ BTC</span>
+            <span class="app-price">€ 58 420</span>
+            <span class="app-up">+2.4%</span>
+          </div>
+          <div class="app-row">
+            <span class="app-coin">Ξ ETH</span>
+            <span class="app-price">€ 2 847</span>
+            <span class="app-up">+1.8%</span>
+          </div>
+          <div class="app-row">
+            <span class="app-coin">◆ SOL</span>
+            <span class="app-price">€ 142</span>
+            <span class="app-down">-0.6%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== BIZTONSÁG / TIMELINE ===== -->
+<section class="safety" id="biztonsag">
+  <div class="container safety-inner">
+    <div class="safety-content reveal">
+      <div class="safety-block">
+        <p>Az üzletemberek számára, legyenek kezdők vagy szakemberek, a Bitcoin
+        kereskedése vonzó lehetőség lehet. A magas profilú üzleti óriások és a pénzügyi
+        világ legnépszerűbb neveinek támogatásával nem meglepő, hogy a Bitcoin
+        kereskedése továbbra is az egyik legforróbb befektetési lehetőség.</p>
+
+        <p>A Bitcoin népszerűsége azok körében, akik értik a pénzügyi klímát és a valószínű
+        jövőt, az egyik ok, amiért érdemes beszállni a Bitcoinba. Ahogy a világ tovább
+        mozdul egyre digitálisabb pénzügyi rendszer felé, a Bitcoin növekedési és
+        stabilitási potenciálja vonzó befektetési lehetőséget kínál.</p>
+      </div>
+
+      <div class="safety-block">
+        <h3>Biztonságos a Bitcoinon kereskedni?</h3>
+        <p>Nem lehet egyetlen piac sem 100% "biztonságos" kereskedelmét tekinteni,
+        és ugyanez igaz a Bitcoinra is. Bármely iparág, amely előrejelzéseken és
+        spekulációkon alapul, mindig kockázati tényezővel jár minden lépésben.
+        Ezért jött létre a BudaBit.</p>
+        <p>A platformot arra tervezték, hogy segítsen megtanulni és megérteni,
+        hogyan lehet stratégiailag dolgozni a piacon, hogy minimalizáljuk a kockázatot
+        okos lépésekkel és intelligens befektetési döntésekkel.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta">
+  <div class="container cta-inner reveal">
+    <h2>Készen áll a csatlakozásra?</h2>
+    <p>Csatlakozz több ezer magyar kereskedőhöz, akik már a BudaBit platformot használják.</p>
+    <a href="#regisztracio" class="btn btn-primary btn-lg">Regisztráció most</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-top">
+      <a href="javascript:void(0)" class="logo">
+        <svg class="logo-mark" viewBox="0 0 48 48" width="36" height="36" aria-hidden="true">
+          <circle cx="24" cy="24" r="20" fill="none" stroke="url(#logoGrad)" stroke-width="2.5"/>
+          <text x="24" y="31" text-anchor="middle" font-family="Manrope, sans-serif"
+                font-weight="800" font-size="20" fill="#F5F5F5">B</text>
+        </svg>
+        <span class="logo-text">Buda<span class="logo-accent">Bit</span></span>
+      </a>
+      <nav class="footer-nav">
+        <a href="javascript:void(0)">Kezdőlap</a>
+        <a href="javascript:void(0)">Lépjen kapcsolatba</a>
+        <a href="javascript:void(0)">Rólunk</a>
+        <a href="javascript:void(0)">Adatvédelmi irányelvek</a>
+        <a href="javascript:void(0)">Feltételek</a>
+      </nav>
+    </div>
+    <div class="footer-disclaimer">
+      <p><strong>Fontos kockázati megjegyzés:</strong> A kereskedés jelentős előnyöket
+      hozhat, azonban részleges vagy teljes pénzvesztéssel járhat, és az új befektetőknek
+      ezt figyelembe kell venniük. A befektetők kb. 70 százaléka pénzt veszíthet.
+      A BudaBit és bármely más kereskedelmi név kizárólag kereskedelmi célokra szolgál,
+      nem vonatkoznak semmilyen konkrét vállalatra vagy szolgáltatóra.</p>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 BudaBit. Minden jog fenntartva.</span>
+      <div class="socials">
+        <a href="javascript:void(0)" aria-label="Facebook">f</a>
+        <a href="javascript:void(0)" aria-label="Instagram">◎</a>
+        <a href="javascript:void(0)" aria-label="Twitter">𝕏</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="importmap">
+{
+  "imports": {
+    "three": "https://unpkg.com/three@0.160.0/build/three.module.js"
+  }
+}
+</script>
+<script type="module" src="scene3d.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
