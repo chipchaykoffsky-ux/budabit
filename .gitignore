@@ -4,3 +4,7 @@ Thumbs.db
 .vscode/
 .idea/
 node_modules/
+
+# local reference assets, not part of site
+*.jpg
+site.md
