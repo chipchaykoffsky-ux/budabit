@@ -209,17 +209,6 @@ h4{font-size:1.15rem}
 .hero-form .btn-primary{width:100%;margin-top:8px}
 .form-note{font-size:.72rem;color:var(--text-dim);margin-top:14px;line-height:1.5}
 
-/* floating coins */
-.coins{position:absolute;inset:0;pointer-events:none}
-.coin{
-  position:absolute;font-size:2rem;color:var(--coral);
-  opacity:.6;animation:float 6s ease-in-out infinite;
-}
-.coin-btc{top:15%;left:8%;font-size:3rem;animation-delay:0s}
-.coin-eth{top:60%;left:5%;font-size:2.4rem;animation-delay:1.5s;color:#4ade80}
-.coin-gold{top:25%;right:42%;font-size:1.5rem;animation-delay:2.5s}
-.coin-small{top:75%;left:48%;font-size:1.2rem;animation-delay:3.5s;color:#f87171}
-
 @keyframes float{
   0%,100%{transform:translateY(0) rotate(0)}
   50%{transform:translateY(-20px) rotate(8deg)}
@@ -228,7 +217,6 @@ h4{font-size:1.15rem}
 @media (max-width:880px){
   .hero{padding:130px 0 60px}
   .hero-inner{grid-template-columns:1fr;gap:40px}
-  .coins{display:none}
 }
 
 /* ============ TICKER (live prices) ============ */
